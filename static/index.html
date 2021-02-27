@@ -1,0 +1,62 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./index.css">
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Sports</title>
+</head>
+<body>
+<div id="app">
+  <div class="re-2">
+    <input type="text" v-model="username">
+    <input type="password" v-model="password">
+    <span v-if="loginedInUser">You have got Api auth！</span>
+    <button class="btn" @click="login" v-else>Get API Auth</button>
+  </div>
+  <div class="hero">
+    <div class="container">
+      <h2 class="hero-title">The Best Memories of your Summer</h2>
+      <div class="hero-desc">
+        <p>Proident sed aliquam, condimentum sed pellentesque placerat in a. Quae placerat ac praesent expedit fusce  </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-primary">
+    <h1>Choose a Water Sports  Book Online and Save 5 %</h1>
+  </div>
+
+  <div class="surface-sports-block">
+    <h2 class="center mb-20">
+      This is What’s Wating for You
+    </h2>
+
+    <p class="center des mb-60">
+      Sed lacinia velit dui, interdum duis curabitur in at accumsan in,
+      vehicula vestibulum at<br> odio aenean et ac. Amet justo lectus et ac,
+      nonummy
+    </p>
+  </div>
+
+  <div class="list">
+    <div class="water-sport-item" :class="i < 3 ? 'mb-30': void 0"
+         v-for="(sports, i) in sportsTypes">
+      <figure class="sport-thumb">
+        <img :src="`./images/${sports.img}`" alt="Sport Thumb">
+      </figure>
+      <div class="sport-info">
+        <h3 class="title mb-15"><a href="#">{{ sports.type }}</a></h3>
+        <p>{{ sports.desc }}</p>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+</div>
+
+<script src="./index.js"></script>
+</body>
+</html>

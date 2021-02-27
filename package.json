@@ -1,0 +1,17 @@
+{
+  "name": "kehu2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "apiServer.js",
+  "scripts": {
+    "serve": "node apiServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.11.18"
+  }
+}
