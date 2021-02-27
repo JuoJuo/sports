@@ -2,7 +2,7 @@ const SportsModel = require('./Sports');
 const UserModel = require('./User');
 const mongoose = require('mongoose');
 
-const databaseUrl = 'mongodb://127.0.0.1:27017/sport';
+const databaseUrl = 'mongodb+srv://sam:zhadi123456@cluster0.egjns.mongodb.net/sport';
 
 const config = {
   useNewUrlParser: true,

@@ -4,7 +4,7 @@ const path = require("path");
 const { findUser, getSportsList } = require("./dao");
 const app = express();
 
-const PORT = 80;
+const PORT = 3000;
 app.use(session({ secret: 'my-ass' }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'static')))
